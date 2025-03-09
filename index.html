@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sonali</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            overflow: hidden;
+            flex-direction: column;
+            animation: backgroundAnimation 10s infinite alternate;
+        }
+        @keyframes backgroundAnimation {
+            0% { background: linear-gradient(45deg, #ff9a9e, #fad0c4); }
+            100% { background: linear-gradient(45deg, #ff758c, #ff7eb3); }
+        }
+        .center-box {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            z-index: 2;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+            animation: pulse 2s infinite alternate;
+        }
+        .center-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+        .orbit-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+        .orbit-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            object-fit: cover;
+            animation: orbit 6s linear infinite;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        }
+        .orbit-img:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); }
+        .orbit-img:nth-child(2) { bottom: 0; left: 50%; transform: translateX(-50%); animation-delay: 1s; }
+        .orbit-img:nth-child(3) { top: 50%; left: 0; transform: translateY(-50%); animation-delay: 2s; }
+        .orbit-img:nth-child(4) { top: 50%; right: 0; transform: translateY(-50%); animation-delay: 3s; }
+        
+        @keyframes orbit {
+            0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+        }
+        .message {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin-top: 450px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            0% { text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5); }
+            100% { text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.8); }
+        }
+    </style>
+</head>
+<body>
+    <div class="center-box">
+        <img src="hand.jpg" alt="Sonali">
+    </div>
+    <div class="orbit-container">
+        <img class="orbit-img" src="pic1.jpg" alt="Friend 1">
+        <img class="orbit-img" src="pic2.jpg" alt="Friend 2">
+        <img class="orbit-img" src="pic3.jpg" alt="Friend 3">
+        <img class="orbit-img" src="pic4.jpg" alt="Friend 4">
+        <img class="orbit-img" src="pic.jpg" alt="Friend 4">
+        <img class="orbit-img" src="pic5.jpg" alt="Friend 4">
+        <img class="orbit-img" src="pic6.jpg" alt="Friend 4">
+        <img class="orbit-img" src="pics1.jpg" alt="Friend 4">
+        <img class="orbit-img" src="pics2.jpg" alt="Friend 4">
+        <img class="orbit-img" src="pics3.jpg" alt="Friend 4">
+        <img class="orbit-img" src="pics4.jpg" alt="Friend 4">
+        <!-- <img class="orbit-img" src="pic4.jpg" alt="Friend 4"> -->
+    </div>
+    <p class="message">Happy Birthday Motki! 😘😘🎉🎂<br>Love you kareja😘😘 <br>ummmmmaahhhh</p>
+</body>
+</html>
